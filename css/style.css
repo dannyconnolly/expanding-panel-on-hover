@@ -1,0 +1,186 @@
+.content{
+    padding: 40px 0;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.demo-header h1{
+    text-align: center;
+}
+
+/* Kwicks Styles */
+.kwicks {
+    width: 100%;
+    height: 450px;
+}
+.kwicks li{
+    height: 450px;
+    text-align: center;
+    cursor: pointer;
+}
+/*
+.panel-content{
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;    
+}
+*/
+.bg, 
+.bg-image, 
+.bg-overlay,
+.hidden-text,
+.opening-text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.bg {
+    z-index: 0;
+}
+.hidden-text,
+.opening-text {
+    z-index: 1;
+    transition: opacity ease-in-out 0.5s;
+    transition-delay: 0.3s;
+}
+.hidden-text{
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    width: 200px;
+    left: 30px;
+    top: 110px;
+}
+.skinner .hidden-text{
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    width: 240px;
+}
+.krycek .hidden-text{
+    left: 340px;
+}
+.hidden-text strong,
+.opening-text strong {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+}
+.hidden-text h2,
+.opening-text h2 {
+    font-weight: 300;
+    font-size: 34px;
+    margin: 0;
+    line-height: 36px;
+}
+.hidden-text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.opening-text {
+    color: #ebe9e9;
+    padding-top: 340px;
+}
+.opening-text strong {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.opening-text h2 {
+    width: 230px;
+    display: block;
+    margin: 0 auto;
+}
+.opening-text span {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+.kwicks-expanded .opening-text,
+.kwicks-collapsed .opening-text,
+.kwicks-collapsed .hidden-text {
+    opacity: 0;
+    visibility: hidden;
+}
+.kwicks-expanded .hidden-text {
+    opacity: 1;
+    visibility: visible;
+}
+.bg-overlay {
+    background: rgba(0,0,0,0.7);
+    transition: opacity  ease-in-out 0.3s;
+    opacity: 1;
+}
+.kwicks-expanded .bg-overlay{
+    opacity: 0;
+}
+.bg-image {
+    transition: transform ease-in-out 0.5s;
+}
+
+.mulder .bg-image {
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(-335px, 0);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(-335px, 0);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(-335px, 0);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(-335px, 0);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(-335px, 0);
+}
+.scully .bg-image{
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(-285px, 0);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(-285px, 0);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(-285px, 0);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(-285px, 0);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(-285px, 0);
+}
+.skinner .bg-image{
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(-260px, 0);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(-260px, 0);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(-260px, 0);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(-260px, 0);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(-260px, 0);
+}
+.krycek .bg-image{
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(-50px, 0);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(-50px, 0);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(-50px, 0);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(-50px, 0);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(-50px, 0);
+}
+.kwicks-expanded .bg-image {
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0, 0);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0, 0);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0, 0);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0, 0);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0, 0);
+}
+.collapsed-header{
+    opacity: 0;
+    visibility: hidden;
+    color: #ebe9e9;
+    font-size: 60px;
+    font-weight: 300;
+    margin: 0;
+    transform: rotate(-90deg);
+    width: 450px;
+    position: absolute;
+    left: -161px;
+    top: 161px;
+    z-index: 2;
+    line-height: 128px;
+    text-shadow: 1px 1px 1px #000;
+    transition: opacity ease-in-out 0.5s;
+    transition-delay: 0.3s;
+}
+.kwicks-collapsed .collapsed-header {
+    opacity: 1;
+    visibility: visible;
+}
